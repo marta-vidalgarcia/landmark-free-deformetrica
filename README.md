@@ -27,6 +27,8 @@ This code requires:
 
 - [git](https://git-scm.com/)
 
+- [FSL](https://fsl.fmrib.ox.ac.uk)
+
 - [ITK](http://www.itk.org)
 
 - [VTK](http://www.vtk.org)
