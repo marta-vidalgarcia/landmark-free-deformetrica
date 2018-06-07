@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<data-set>
+    <subject id="1_r.vtk">
+        <visit id="experiment">
+            <filename object_id="mandible">1_r.vtk</filename>
+        </visit>
+    </subject>
+    <subject id="2_r.vtk">
+        <visit id="experiment">
+            <filename object_id="mandible">2_r.vtk</filename>
+        </visit>
+    </subject>
+</data-set>
