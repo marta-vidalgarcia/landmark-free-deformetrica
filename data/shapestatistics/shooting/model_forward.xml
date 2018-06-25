@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<model>
+    <model-type>Shooting</model-type>
+    <initial-cp-position>../Atlas_ControlPoints.txt</initial-cp-position>
+    <initial-mom-values>forward.txt</initial-mom-values>
+    <template>
+        <object id="mandible">
+            <deformable-object-type>NonOrientedSurfaceMesh</deformable-object-type>
+            <data-sigma>10.0</data-sigma>
+            <kernel-type>p3m</kernel-type>
+            <kernel-width>2.0</kernel-width>
+            <filename>no filename for shooting</filename>
+        </object>
+    </template>
+    <deformation-parameters>
+        <kernel-width>1.5</kernel-width>
+        <kernel-type>p3m</kernel-type>
+        <number-of-timepoints>20</number-of-timepoints>
+    </deformation-parameters>
+</model>
