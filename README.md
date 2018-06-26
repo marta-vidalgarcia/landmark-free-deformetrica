@@ -1,6 +1,6 @@
 # Landmark-Free Morphometry
 
-```Landmark-Free-Morphometry``` is a set of tools that aid the analysis of shapes (meshes) in a polupation without the need of landmark picking.
+```Landmark-Free-Morphometry``` is a set of tools that aid the analysis of shapes (meshes) in a population without the need of landmark picking.
 
 ![Landmark-Free-Morphometry](Images/pipeline.png "Landmark-Free-Morphometry")
 
@@ -19,6 +19,24 @@ The aim of the library is to provide/provide a simplified way to:
 
 - Aid analysis of sub-group variabilities using an SVM classifier and PCAs.
 
+
+## Content:
+
+### [Pre-Processing](uCT-process.ipynb)
+
+![Pre-Processing](Images/uCT-process.png "Pre-Processing")
+
+### [Mesh-Alignment](mesh-alignment.ipynb)
+
+![Mesh-Alignment](Images/mesh-alignment.png "Mesh-Alignment")
+
+### [Atlas-Construction](atlas-construction.ipynb)
+
+![Atlas-Construction](Images/atlas-construction.png "Atlas-Construction")
+
+### [Shape-Statistics](shape-statistics-analysis.ipynb)
+
+![shape-statistics-analysis.ipynb](Images/shape-statistics-analysis.png "Shape-Statistics")
 
 
 ## Installation
@@ -39,8 +57,8 @@ This code requires:
 
 - [Python](http://www.python.org)
 
+- **Python packages**: Specified in each notebook
 
-### Binary Segmentation
 
 
 ## About
