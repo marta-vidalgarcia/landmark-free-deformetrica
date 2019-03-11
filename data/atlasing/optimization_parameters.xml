@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <optimization-parameters>
+    <optimization-method-type>ScipyLBFGS</optimization-method-type>
     <initial-step-size>0.01</initial-step-size>
-    <max-iterations>6</max-iterations>
-    <number-of-threads>2</number-of-threads>
+    <max-iterations>150</max-iterations>
     <save-every-n-iters>5</save-every-n-iters>
-    <smoothing-kernel-width-ratio>0.5</smoothing-kernel-width-ratio>
+    <use-cuda>Off</use-cuda>
 </optimization-parameters>

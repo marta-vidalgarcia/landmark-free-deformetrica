@@ -5,6 +5,13 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $dir
 
 # Atlas construction :
-deformetrica atlas 3D model.xml data_set.xml optimization_parameters.xml --output-dir=. > deformetrica.log
+deformetrica estimate model.xml data_set.xml -p optimization_parameters.xml --output=. -v DEBUG 2>&1 | tee deformetrica.log
 
-cat deformetrica.log | grep Log-like | awk -F" " '{print $3, $7, $11}' | tr -d ] > convergence.txt
+# Gather convergence information
+cat deformetrica.log | grep Log-like | awk -F" " '{print $4, $8, $12}' | tr -d ] > convergence.txt
+
+# Simplify naming:
+mv `ls *EstimatedParameters__Momenta.txt` Atlas_Momentas.txt
+mv `ls *EstimatedParameters__ControlPoints.txt` Atlas_ControlPoints.txt
+mv `ls *_EstimatedParameters__Template_*.vtk` Atlas_initial_template.vtk
+

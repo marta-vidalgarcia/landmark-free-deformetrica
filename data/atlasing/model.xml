@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <model>
-    <model-type>BayesianAtlas</model-type>
+    <model-type>DeterministicAtlas</model-type>
+    <dimension>3</dimension>
     <template>
         <object id="mandible">
-            <deformable-object-type>NonOrientedSurfaceMesh</deformable-object-type>
-            <data-sigma>10</data-sigma>
-            <kernel-type>p3m</kernel-type>
-            <kernel-width>2.0</kernel-width>
+            <deformable-object-type>SurfaceMesh</deformable-object-type>
+            <attachment-type>current</attachment-type>
+	    <noise-std>1</noise-std>
+            <kernel-type>keops</kernel-type>
+            <kernel-width>.5</kernel-width>
             <filename>initial_template.vtk</filename>
         </object>
     </template>
     <deformation-parameters>
-        <kernel-width>1.5</kernel-width>
-        <kernel-type>p3m</kernel-type>
-        <number-of-timepoints>10</number-of-timepoints>
+	    <kernel-width>1</kernel-width>
+        <kernel-type>keops</kernel-type>
+        <number-of-timepoints>20</number-of-timepoints>
     </deformation-parameters>
 </model>
