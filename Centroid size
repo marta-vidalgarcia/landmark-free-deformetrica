@@ -1,6 +1,14 @@
 {
  "cells": [
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "To calculate centroid size requires the origional mesh files with their landmarks.\n",
+    "Put these files into the centroid folder"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 127,
    "metadata": {},
