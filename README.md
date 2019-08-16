@@ -86,6 +86,8 @@ The aim of the library is to provide/provide a simplified way to:
 
 Each step of the pipeline includes instructions and relevant demo data set
 
+For further tutorial on running the pipeline please refer to appendix A in the paper ( Inset paper link here )
+
 ## Content:
 
 ### [Pre-Processing](uCT-process.ipynb)
@@ -103,28 +105,6 @@ Each step of the pipeline includes instructions and relevant demo data set
 ### [Shape-Statistics](shape-statistics-analysis.ipynb)
 
 ![shape-statistics-analysis.ipynb](Images/shape-statistics-analysis.png "Shape-Statistics")
-
-
-## Installation
-
-This code requires:
-
-- [git](https://git-scm.com/)
-
-- [FSL](https://fsl.fmrib.ox.ac.uk)
-
-- [ITK](http://www.itk.org)
-
-- [VTK](http://www.vtk.org)
-
-- [CMake](http://www.cmake.com)
-
-- [Deformetrica](http://www.deformetrica.org)
-
-- [Python](http://www.python.org)
-
-- **Python packages**: Specified in each notebook
-
 
 
 ## About
