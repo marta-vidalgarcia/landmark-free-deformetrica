@@ -52,10 +52,10 @@ This Pipeline has been tested on:
 
 Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location.
 
-Start tehe pipeline fromt the terminal with:
+Start the pipeline fromt the terminal with:
 
 ```
-        ipython notebook
+ipython notebook
 ```
 
 # Landmark-Free Morphometry
