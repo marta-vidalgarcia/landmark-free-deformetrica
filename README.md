@@ -84,7 +84,8 @@ The aim of the library is to provide/provide a simplified way to:
 
 ## Demo
 
-Each step of the pipeline includes instructions and relevant demo data set
+Each step of the pipeline includes instructions and relevant demo data set.
+Depending on your hardware the pipeline should take between 4-8 hours to run.
 
 For further tutorial on running the pipeline please refer to appendix A in the paper ( Inset paper link here )
 
