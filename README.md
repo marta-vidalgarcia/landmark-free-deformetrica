@@ -60,7 +60,7 @@ ipython notebook
 
 
 
-##Demo
+
 # Landmark-Free Morphometry
 
 ```Landmark-Free-Morphometry``` is a set of tools that aid the analysis of shapes (meshes) in a population without the need of landmark picking.
@@ -82,6 +82,9 @@ The aim of the library is to provide/provide a simplified way to:
 
 - Aid analysis of sub-group variabilities using an SVM classifier and PCAs.
 
+## Demo
+
+Each step of the pipeline includes instructions and relevant demo data set
 
 ## Content:
 
