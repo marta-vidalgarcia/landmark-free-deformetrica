@@ -54,8 +54,9 @@ Pipeline can be downloaded as a .zip or .tar file and then decompressed in a cho
 
 Start tehe pipeline fromt the terminal with:
 
+```
         ipython notebook
-
+```
 
 # Landmark-Free Morphometry
 
