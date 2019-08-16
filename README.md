@@ -58,6 +58,9 @@ Start the pipeline from the terminal with:
 ipython notebook
 ```
 
+
+
+##Demo
 # Landmark-Free Morphometry
 
 ```Landmark-Free-Morphometry``` is a set of tools that aid the analysis of shapes (meshes) in a population without the need of landmark picking.
