@@ -4,18 +4,30 @@ Operating System Requirements: Anaconda 3, Linux or Mac OS X distributions
 
 Absolutely required:
 -FSL - https://fsl.fmrib.ox.ac.uk/fsl/fslwiki  (Image analysis tools) 
+
 -Deformetrica - http://www.deformetrica.org/ (Atlasing tools)
+
 -Git - https://git-scm.com/  (Code version-control system)
+
 -ITK - https://itk.org/ (Segmentation and registration tools)
+
 -VTK - https://vtk.org/      (Visualisation tools)
+
 -CMake - https://cmake.org/   (Compiler)
 
+
 -Python packages:
+
 Matplotlib
+
 Numpy
+
 SimpleITK
+
 Vtk
+
 Pandas
+
 Seaborn
 
 Software we used but for which there may be similar alternatives:
