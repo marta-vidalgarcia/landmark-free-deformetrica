@@ -1,3 +1,32 @@
+#Installation
+
+Operating System Requirements: Anaconda 3, Linux or Mac OS X distributions
+
+Absolutely required:
+-FSL - https://fsl.fmrib.ox.ac.uk/fsl/fslwiki  (Image analysis tools) 
+-Deformetrica - http://www.deformetrica.org/ (Atlasing tools)
+-Git - https://git-scm.com/  (Code version-control system)
+-ITK - https://itk.org/ (Segmentation and registration tools)
+-VTK - https://vtk.org/      (Visualisation tools)
+-CMake - https://cmake.org/   (Compiler)
+
+-Python packages:
+Matplotlib
+Numpy
+SimpleITK
+Vtk
+Pandas
+Seaborn
+
+Software we used but for which there may be similar alternatives:
+Meshlab - http://www.meshlab.net/  (Mesh decimation)
+Itksnap - http://www.itksnap.org/pmwiki/pmwiki.php  (Image manipulation tool)
+Paraview - https://www.paraview.org/    (Image visualisation tools)
+Mitk - http://mitk.org/wiki/The_Medical_Imaging_Interaction_Toolkit_(MITK) 
+(Landmarking tool for coarse alignment )
+
+
+
 # Landmark-Free Morphometry
 
 ```Landmark-Free-Morphometry``` is a set of tools that aid the analysis of shapes (meshes) in a population without the need of landmark picking.
