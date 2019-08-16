@@ -37,6 +37,15 @@ Paraview - https://www.paraview.org/    (Image visualisation tools)
 Mitk - http://mitk.org/wiki/The_Medical_Imaging_Interaction_Toolkit_(MITK) 
 (Landmarking tool for coarse alignment )
 
+This Pipeline has been tested on:
+
+- macOS High sierra V10.13.6
+- Deformetrica 3 and 4
+- FSL 5.0.11
+- ITK 4.12.2
+- VTK 8.2.0
+- CMake 3.12.1
+- Python3
 
 
 # Landmark-Free Morphometry
