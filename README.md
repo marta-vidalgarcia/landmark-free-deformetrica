@@ -3,6 +3,9 @@
 Operating System Requirements: Anaconda 3, Linux or Mac OS X distributions
 
 Absolutely required:
+
+- Please install by following the relevant links
+
 -FSL - https://fsl.fmrib.ox.ac.uk/fsl/fslwiki  (Image analysis tools) 
 
 -Deformetrica - http://www.deformetrica.org/ (Atlasing tools)
@@ -46,6 +49,12 @@ This Pipeline has been tested on:
 - VTK 8.2.0
 - CMake 3.12.1
 - Python3
+
+Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location.
+
+Start tehe pipeline fromt the terminal with:
+
+        ipython notebook
 
 
 # Landmark-Free Morphometry
