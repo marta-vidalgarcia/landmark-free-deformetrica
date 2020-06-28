@@ -6,15 +6,17 @@
         <object id="mandible">
             <deformable-object-type>SurfaceMesh</deformable-object-type>
             <attachment-type>current</attachment-type>
-	    <noise-std>1</noise-std>
+	        <noise-std>1.0</noise-std>
             <kernel-type>keops</kernel-type>
-            <kernel-width>.5</kernel-width>
+            <kernel-device>gpu</kernel-device>
+            <kernel-width>0.5</kernel-width>
             <filename>initial_template.vtk</filename>
         </object>
     </template>
     <deformation-parameters>
-	    <kernel-width>1</kernel-width>
+	    <kernel-width>3.0</kernel-width>
         <kernel-type>keops</kernel-type>
+        <kernel-device>gpu</kernel-device>
         <number-of-timepoints>20</number-of-timepoints>
     </deformation-parameters>
 </model>
