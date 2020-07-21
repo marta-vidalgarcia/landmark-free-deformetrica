@@ -94,6 +94,10 @@ For further tutorial on running the pipeline please refer to appendix A in the p
 
 ![Pre-Processing](Images/uCT-process.png "Pre-Processing")
 
+### [Mesh-Processing](mesh-process.ipynb)
+
+![Mesh-Processing](Images/mesh-process.png "Mesh-Processing")
+
 ### [Mesh-Alignment](mesh-alignment.ipynb)
 
 ![Mesh-Alignment](Images/mesh-alignment.png "Mesh-Alignment")
