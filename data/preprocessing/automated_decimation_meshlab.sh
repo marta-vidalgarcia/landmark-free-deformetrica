@@ -16,3 +16,5 @@ echo "Decimating ${file}"
     meshlabserver -i "$file" -o "${file%.*}${out_pattern}" -s "auto_meshlab_decimation.mlx" -om vc
 done
 echo "All meshes have been processed"
+
+# If you have any questions or suggestions you can contact Marta Vidal-Garcia (marta.vidalga@gmail.com)
