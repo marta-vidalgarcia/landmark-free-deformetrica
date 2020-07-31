@@ -1,45 +1,74 @@
-#### write_mps - SAVE MPS FILES FROM A LANDMARK ARRAY
-#' @name write_mps
-#' @title write_mps
+#### tag2mps - CONVERT TAG LM FILES TO MPS
+#' @name tag2mps
+#' @title tag2mps
 #'
 #' @description
-#'   Writes *.mps files from an array of 3D landmarks.
+#'   Converts several landmark TAG files (from the software MINC toolkit) to *.mps files.
 #'
 #' @usage
-#'   write_mps(arrayLMs = arrayLMs, dir = NULL, ID = NULL)
+#'   tag2mps(files = NULL, dir = NULL, ID = NULL)
 #'
-#' @param arrayLMs an object of the class "array" that contains
-#' three-dimensional landmarks for 'n' specimens
-#' @param dir optional variable that selects which directory the mps files should be saved to
+#' @param files an optional variable with a subset of TAG files in a directory
+#' @param dir optional variable that selects the directory. the default (NULL) is the current directory
 #' @param ID optional vector with IDs for saving the *.mps files
+#' @param propagated Optional argument indicating if the landmarks have been propagated (extra line). The default is FALSE.
 #'
 #' @details
-#'   Takes a landmark array and saves the landmarks for each specimen as *.mps files.
+#'   Imports multiple TXT files (without a header) with landmarks for each specimen and saves them as *.mps files.
 #'
 #' @author Marta Vidal-Garcia
 #'
 #' @examples
-#' test1 <- array(data = 1:10, dim = c(5,3,2))
-#' write_mps(arrayLMs = test1, ID = c("spec1", "spec2"))
 #'
-#' test2 <- array(data = 1:10, dim = c(5,3,2), dimnames = list(c("LM1", "LM2",
-#' "LM3", "LM4", "LM5"), c("x", "y", "z"), c("spec1", "spec2")))
-#' write_mps(arrayLMs = test2)
-#'
-#' test3 <- array(data = 1:10, dim = c(5,3,2))
-#' dimnames(test3)[[3]] <- c("spec1", "spec2")
-#' write_mps(arrayLMs = test3, dir = "../")
+#' tag2mps(files = NULL, ID = c("spec1", "spec2"))
 #'
 #' @export
 #'
 
-write_mps <- function(arrayLMs = arrayLMs, dir = NULL, ID = NULL){
+tag2mps <- function(files = NULL, dir = NULL, ID = NULL, propagated = FALSE) {
   if (is.null(dir) == TRUE) {
     path <- getwd()
+    old_path <- getwd()
   } else {
-    path <- getwd()
-    setwd(dir)
+    path <- dir
+    old_path <- getwd()
+    setwd(path)
   }
+  if (is.null(files) == TRUE){
+    files_list <- dir(getwd(), pattern = "*.tag")
+  }
+  else {
+    files_list <- files
+  }
+  n_land <- vector("numeric", length=length(files_list))
+  for (i in 1:length(files_list)){
+    if (isTRUE(propagated) == TRUE){
+      n_land[i] <- length(count.fields(files_list[[i]])) -4
+    }
+    else {
+      n_land[i] <- length(count.fields(files_list[[i]])) -3 # doublecheck if this should be 3
+    }
+  }
+  if (length(unique(n_land))!=1){
+    stop("Specimens have different number of landmarks.")
+  }
+  arrayLMs <- array(data = NA, dim = c(n_land[1], 3, length(files_list)))
+  dimnames(arrayLMs)[[3]] <- gsub(".tag", "", files_list)
+  if (isTRUE(propagated) == TRUE){
+    for (i in 1:length(files_list)){
+      arrayLMs[,1,i] <- suppressWarnings(read.table(file = files_list[[i]], skip = 5, sep = " ", header=F))[, 1]
+      arrayLMs[,2,i] <- suppressWarnings(read.table(file = files_list[[i]], skip = 5, sep = " ", header=F))[, 2]
+      arrayLMs[,3,i] <- suppressWarnings(read.table(file = files_list[[i]], skip = 5, sep = " ", header=F))[, 3]
+    }
+  }
+  else{
+    for (i in 1:length(files_list)){
+      arrayLMs[,1,i] <- suppressWarnings(read.table(file = files_list[[i]], skip = 4, sep = " ", header=F))[, 2]
+      arrayLMs[,2,i] <- suppressWarnings(read.table(file = files_list[[i]], skip = 4, sep = " ", header=F))[, 3]
+      arrayLMs[,3,i] <- suppressWarnings(read.table(file = files_list[[i]], skip = 4, sep = " ", header=F))[, 4]
+    }
+  }
+
   if (is.null(ID) == TRUE) {
     dimnames_mps <- dimnames(arrayLMs)[[3]]
   } else {
@@ -78,6 +107,5 @@ write_mps <- function(arrayLMs = arrayLMs, dir = NULL, ID = NULL){
     close(file_mps)
     rm(landmarks, file_mps)
   }
-  setwd(path)
+  setwd(old_path)
 }
-
