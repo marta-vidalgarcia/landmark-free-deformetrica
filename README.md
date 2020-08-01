@@ -18,7 +18,7 @@ Absolutely required:
 
 - CMake - https://cmake.org/   (Compiler)
 
-- Meshlab - https://www.meshlab.net/ (Mesh processing)
+- Meshlab - https://www.meshlab.net/ (Mesh cleaning and decimation)
 
 
 -Python packages:
@@ -36,7 +36,6 @@ Pandas
 Seaborn
 
 Software we used but for which there may be similar alternatives:
-Meshlab - http://www.meshlab.net/  (Mesh decimation)
 Itksnap - http://www.itksnap.org/pmwiki/pmwiki.php  (Image manipulation tool)
 Paraview - https://www.paraview.org/    (Image visualisation tools)
 Mitk - http://mitk.org/wiki/The_Medical_Imaging_Interaction_Toolkit_(MITK) 
