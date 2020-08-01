@@ -18,6 +18,9 @@ Absolutely required:
 
 - CMake - https://cmake.org/   (Compiler)
 
+- Meshlab - https://www.meshlab.net/ (Mesh processing)
+
+
 -Python packages:
 
 Matplotlib
@@ -49,7 +52,7 @@ This Pipeline has been tested on:
 - CMake 3.12.1
 - Python3
 
-Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location.
+Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location. For more information on how to install it, please see:[Installation](install.ipynb)
 
 Start the pipeline from the terminal with:
 
