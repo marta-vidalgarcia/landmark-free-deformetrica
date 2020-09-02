@@ -18,6 +18,9 @@ Absolutely required:
 
 - CMake - https://cmake.org/   (Compiler)
 
+- Meshlab - https://www.meshlab.net/ (Mesh cleaning and decimation)
+
+
 -Python packages:
 
 Matplotlib
@@ -33,7 +36,6 @@ Pandas
 Seaborn
 
 Software we used but for which there may be similar alternatives:
-Meshlab - http://www.meshlab.net/  (Mesh decimation)
 Itksnap - http://www.itksnap.org/pmwiki/pmwiki.php  (Image manipulation tool)
 Paraview - https://www.paraview.org/    (Image visualisation tools)
 Mitk - http://mitk.org/wiki/The_Medical_Imaging_Interaction_Toolkit_(MITK) 
@@ -49,7 +51,7 @@ This Pipeline has been tested on:
 - CMake 3.12.1
 - Python3
 
-Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location.
+Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location. For more information on how to install it, please see:[Installation](install.ipynb)
 
 Start the pipeline from the terminal with:
 
@@ -93,6 +95,10 @@ For further tutorial on running the pipeline please refer to appendix A in the p
 ### [Pre-Processing](uCT-process.ipynb)
 
 ![Pre-Processing](Images/uCT-process.png "Pre-Processing")
+
+### [Mesh-Processing](mesh-process.ipynb)
+
+![Mesh-Processing](Images/mesh-process.png "Mesh-Processing")
 
 ### [Mesh-Alignment](mesh-alignment.ipynb)
 
