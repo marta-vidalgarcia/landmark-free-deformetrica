@@ -92,6 +92,10 @@ For further tutorial on running the pipeline please refer to appendix A in the p
 
 ## Content:
 
+### [Installation](install.ipynb)
+
+![Direct_download](Images/direct_download.png "Direct_Download")
+
 ### [Pre-Processing](uCT-process.ipynb)
 
 ![Pre-Processing](Images/uCT-process.png "Pre-Processing")
