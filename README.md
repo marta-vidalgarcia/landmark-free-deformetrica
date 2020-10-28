@@ -51,7 +51,7 @@ This Pipeline has been tested on:
 - CMake 3.12.1
 - Python3
 
-Pipeline can be downloaded as a .zip or .tar file and then decompressed in a chose location. For more information on how to install it, please see:[Installation](install.ipynb)
+Pipeline can be directly downloaded. For information on how to install it, please see:[Installation](install.ipynb)
 
 Start the pipeline from the terminal with:
 
@@ -91,6 +91,10 @@ Depending on your hardware the pipeline should take between 4-8 hours to run.
 For further tutorial on running the pipeline please refer to appendix A in the paper ( Inset paper link here )
 
 ## Content:
+
+### [Installation](install.ipynb)
+
+![Direct_download](Images/direct_download.png "Direct_Download")
 
 ### [Pre-Processing](uCT-process.ipynb)
 
