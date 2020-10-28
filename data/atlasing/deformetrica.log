@@ -1,0 +1,508 @@
+INFO:deformetrica.__main__:Setting output directory to: .
+Logger has been set to: DEBUG
+>> No initial CP spacing given: using diffeo kernel width of 3.0
+OMP_NUM_THREADS was not found in environment variables. An automatic value will be set.
+OMP_NUM_THREADS will be set to 4
+nofile (soft): 4096, nofile (hard): 4096
+>> No specified state-file. By default, Deformetrica state will by saved in file: ./deformetrica-state.p.
+instantiating kernel keops with kernel_width 3.0 and gpu_mode GpuMode.KERNEL. addr: 0x7f421c5c8d90
+instantiating kernel keops with kernel_width 0.5 and gpu_mode GpuMode.KERNEL. addr: 0x7f421c5cd850
+>> Set of 660 control points defined.
+>> Momenta initialized to zero, for 2 subjects.
+{'initial_step_size': 0.01, 'scale_initial_step_size': True, 'line_search_shrink': 0.5, 'line_search_expand': 1.5, 'max_line_search_iterations': 10, 'optimized_log_likelihood': 'complete', 'optimization_method_type': 'gradientascent', 'max_iterations': 150, 'convergence_tolerance': 0.0001, 'print_every_n_iters': 1, 'save_every_n_iters': 100, 'gpu_mode': <GpuMode.KERNEL: 4>, 'state_file': './deformetrica-state.p', 'load_state_file': False, 'memory_length': 10}
+dtype=float32
+>> Started estimator: GradientAscent
+Compiling libKeOpstorchafacdfd556 in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchafacdfd556:
+       formula: Sum_Reduction(Exp(-G*SqDist(X,Y)) * P,0)
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); P = Vj(3,3); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchafacdfd556/CMakeFiles/keopslibKeOpstorchafacdfd556.dir/keops/core/./keopslibKeOpstorchafacdfd556_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorchb5cd630dea in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchb5cd630dea:
+       formula: Sum_Reduction((Px|Py) * Exp(-G*SqDist(X,Y)) * (X-Y),0)
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); Px = Vi(3,3); Py = Vj(4,3); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchb5cd630dea/CMakeFiles/keopslibKeOpstorchb5cd630dea.dir/keops/core/./keopslibKeOpstorchb5cd630dea_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorch9a32b2707a in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch9a32b2707a:
+       formula: Grad_WithSavedForward(Sum_Reduction(Exp(-G*SqDist(X,Y)) * P,0), Var(1,3,0), Var(4,3,0), Var(5,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); P = Vj(3,3); Var(4,3,0); Var(5,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch9a32b2707a/CMakeFiles/keopslibKeOpstorch9a32b2707a.dir/keops/core/./keopslibKeOpstorch9a32b2707a_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorchdf3ebea955 in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchdf3ebea955:
+       formula: Grad_WithSavedForward(Sum_Reduction(Exp(-G*SqDist(X,Y)) * P,0), Var(2,3,1), Var(4,3,0), Var(5,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); P = Vj(3,3); Var(4,3,0); Var(5,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchdf3ebea955/CMakeFiles/keopslibKeOpstorchdf3ebea955.dir/keops/core/./keopslibKeOpstorchdf3ebea955_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorchc9f511efb7 in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchc9f511efb7:
+       formula: Grad_WithSavedForward(Sum_Reduction(Exp(-G*SqDist(X,Y)) * P,0), Var(3,3,1), Var(4,3,0), Var(5,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); P = Vj(3,3); Var(4,3,0); Var(5,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorchc9f511efb7/CMakeFiles/keopslibKeOpstorchc9f511efb7.dir/keops/core/./keopslibKeOpstorchc9f511efb7_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorch3c0e4ff066 in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch3c0e4ff066:
+       formula: Grad_WithSavedForward(Sum_Reduction((Px|Py) * Exp(-G*SqDist(X,Y)) * (X-Y),0), Var(1,3,0), Var(5,3,0), Var(6,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); Px = Vi(3,3); Py = Vj(4,3); Var(5,3,0); Var(6,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch3c0e4ff066/CMakeFiles/keopslibKeOpstorch3c0e4ff066.dir/keops/core/./keopslibKeOpstorch3c0e4ff066_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorch0b49194362 in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch0b49194362:
+       formula: Grad_WithSavedForward(Sum_Reduction((Px|Py) * Exp(-G*SqDist(X,Y)) * (X-Y),0), Var(2,3,1), Var(5,3,0), Var(6,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); Px = Vi(3,3); Py = Vj(4,3); Var(5,3,0); Var(6,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch0b49194362/CMakeFiles/keopslibKeOpstorch0b49194362.dir/keops/core/./keopslibKeOpstorch0b49194362_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorcha1e9a8fb7b in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorcha1e9a8fb7b:
+       formula: Grad_WithSavedForward(Sum_Reduction((Px|Py) * Exp(-G*SqDist(X,Y)) * (X-Y),0), Var(3,3,0), Var(5,3,0), Var(6,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); Px = Vi(3,3); Py = Vj(4,3); Var(5,3,0); Var(6,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorcha1e9a8fb7b/CMakeFiles/keopslibKeOpstorcha1e9a8fb7b.dir/keops/core/./keopslibKeOpstorcha1e9a8fb7b_generated_link_autodiff.cu.o successfully.
+Done.
+Compiling libKeOpstorch69f0a7f02e in /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch69f0a7f02e:
+       formula: Grad_WithSavedForward(Sum_Reduction((Px|Py) * Exp(-G*SqDist(X,Y)) * (X-Y),0), Var(4,3,1), Var(5,3,0), Var(6,3,0))
+       aliases: G = Pm(0,1); X = Vi(1,3); Y = Vj(2,3); Px = Vi(3,3); Py = Vj(4,3); Var(5,3,0); Var(6,3,0); 
+       dtype  : float32
+... Generated /home/bhlab/.cache/pykeops-1.4.1-cpython-37/build-libKeOpstorch69f0a7f02e/CMakeFiles/keopslibKeOpstorch69f0a7f02e.dir/keops/core/./keopslibKeOpstorch69f0a7f02e_generated_link_autodiff.cu.o successfully.
+Done.
+------------------------------------- Iteration: 0 -------------------------------------
+>> Log-likelihood = -2.602E+01 	 [ attachment = -2.602E+01 ; regularity = 0.000E+00 ]
+>> Step size and gradient norm: 
+		7.225E-06   and   1.384E+03 	[ landmark_points ]
+		7.225E-06   and   0.000E+00 	[ control_points ]
+		1.220E-04   and   8.199E+01 	[ momenta ]
+------------------------------------- Iteration: 1 -------------------------------------
+>> Log-likelihood = -2.519E+01 	 [ attachment = -2.519E+01 ; regularity = -2.847E-04 ]
+>> Step size and gradient norm: 
+		1.084E-05   and   1.336E+03 	[ landmark_points ]
+		1.084E-05   and   5.895E-02 	[ control_points ]
+		1.830E-04   and   7.949E+01 	[ momenta ]
+------------------------------------- Iteration: 2 -------------------------------------
+>> Log-likelihood = -2.403E+01 	 [ attachment = -2.403E+01 ; regularity = -1.712E-03 ]
+>> Step size and gradient norm: 
+		1.626E-05   and   1.266E+03 	[ landmark_points ]
+		1.626E-05   and   1.397E-01 	[ control_points ]
+		2.744E-04   and   7.584E+01 	[ momenta ]
+------------------------------------- Iteration: 3 -------------------------------------
+>> Log-likelihood = -2.246E+01 	 [ attachment = -2.246E+01 ; regularity = -5.830E-03 ]
+>> Step size and gradient norm: 
+		2.439E-05   and   1.166E+03 	[ landmark_points ]
+		2.439E-05   and   2.448E-01 	[ control_points ]
+		4.116E-04   and   7.060E+01 	[ momenta ]
+------------------------------------- Iteration: 4 -------------------------------------
+>> Log-likelihood = -2.046E+01 	 [ attachment = -2.045E+01 ; regularity = -1.562E-02 ]
+>> Step size and gradient norm: 
+		3.658E-05   and   1.028E+03 	[ landmark_points ]
+		3.658E-05   and   3.708E-01 	[ control_points ]
+		6.175E-04   and   6.335E+01 	[ momenta ]
+------------------------------------- Iteration: 5 -------------------------------------
+>> Log-likelihood = -1.811E+01 	 [ attachment = -1.807E+01 ; regularity = -3.600E-02 ]
+>> Step size and gradient norm: 
+		5.487E-05   and   8.489E+02 	[ landmark_points ]
+		5.487E-05   and   5.025E-01 	[ control_points ]
+		9.262E-04   and   5.390E+01 	[ momenta ]
+------------------------------------- Iteration: 6 -------------------------------------
+>> Log-likelihood = -1.563E+01 	 [ attachment = -1.556E+01 ; regularity = -7.327E-02 ]
+>> Step size and gradient norm: 
+		8.230E-05   and   6.450E+02 	[ landmark_points ]
+		8.230E-05   and   6.093E-01 	[ control_points ]
+		1.389E-03   and   4.293E+01 	[ momenta ]
+------------------------------------- Iteration: 7 -------------------------------------
+>> Log-likelihood = -1.334E+01 	 [ attachment = -1.321E+01 ; regularity = -1.314E-01 ]
+>> Step size and gradient norm: 
+		1.234E-04   and   4.587E+02 	[ landmark_points ]
+		1.234E-04   and   6.554E-01 	[ control_points ]
+		2.084E-03   and   3.237E+01 	[ momenta ]
+------------------------------------- Iteration: 8 -------------------------------------
+>> Log-likelihood = -1.140E+01 	 [ attachment = -1.119E+01 ; regularity = -2.065E-01 ]
+>> Step size and gradient norm: 
+		1.852E-04   and   3.301E+02 	[ landmark_points ]
+		1.852E-04   and   6.240E-01 	[ control_points ]
+		3.126E-03   and   2.416E+01 	[ momenta ]
+------------------------------------- Iteration: 9 -------------------------------------
+>> Log-likelihood = -9.760E+00 	 [ attachment = -9.470E+00 ; regularity = -2.891E-01 ]
+>> Step size and gradient norm: 
+		2.778E-04   and   2.405E+02 	[ landmark_points ]
+		2.778E-04   and   5.398E-01 	[ control_points ]
+		4.689E-03   and   1.790E+01 	[ momenta ]
+------------------------------------- Iteration: 10 -------------------------------------
+>> Log-likelihood = -8.419E+00 	 [ attachment = -8.039E+00 ; regularity = -3.805E-01 ]
+>> Step size and gradient norm: 
+		4.166E-04   and   1.746E+02 	[ landmark_points ]
+		4.166E-04   and   4.752E-01 	[ control_points ]
+		7.033E-03   and   1.290E+01 	[ momenta ]
+------------------------------------- Iteration: 11 -------------------------------------
+>> Log-likelihood = -7.397E+00 	 [ attachment = -6.912E+00 ; regularity = -4.852E-01 ]
+>> Step size and gradient norm: 
+		6.250E-04   and   1.149E+02 	[ landmark_points ]
+		6.250E-04   and   4.180E-01 	[ control_points ]
+		1.055E-02   and   8.764E+00 	[ momenta ]
+------------------------------------- Iteration: 12 -------------------------------------
+>> Log-likelihood = -6.762E+00 	 [ attachment = -6.167E+00 ; regularity = -5.945E-01 ]
+>> Step size and gradient norm: 
+		9.374E-04   and   1.720E+02 	[ landmark_points ]
+		9.374E-04   and   4.500E-01 	[ control_points ]
+		1.582E-02   and   9.000E+00 	[ momenta ]
+>> Step size and gradient norm: 
+		4.687E-04   and   1.720E+02 	[ landmark_points ]
+		4.687E-04   and   4.500E-01 	[ control_points ]
+		7.912E-03   and   9.000E+00 	[ momenta ]
+------------------------------------- Iteration: 13 -------------------------------------
+>> Log-likelihood = -6.696E+00 	 [ attachment = -6.079E+00 ; regularity = -6.163E-01 ]
+>> Step size and gradient norm: 
+		4.687E-04   and   2.793E+02 	[ landmark_points ]
+		2.344E-04   and   4.000E-01 	[ control_points ]
+		3.956E-03   and   1.355E+01 	[ momenta ]
+------------------------------------- Iteration: 14 -------------------------------------
+>> Log-likelihood = -6.566E+00 	 [ attachment = -5.932E+00 ; regularity = -6.339E-01 ]
+>> Step size and gradient norm: 
+		2.344E-04   and   1.972E+02 	[ landmark_points ]
+		2.344E-04   and   3.900E-01 	[ control_points ]
+		1.978E-03   and   9.636E+00 	[ momenta ]
+------------------------------------- Iteration: 15 -------------------------------------
+>> Log-likelihood = -6.504E+00 	 [ attachment = -5.866E+00 ; regularity = -6.379E-01 ]
+>> Step size and gradient norm: 
+		3.515E-04   and   1.776E+02 	[ landmark_points ]
+		3.515E-04   and   4.239E-01 	[ control_points ]
+		2.967E-03   and   8.734E+00 	[ momenta ]
+------------------------------------- Iteration: 16 -------------------------------------
+>> Log-likelihood = -6.438E+00 	 [ attachment = -5.791E+00 ; regularity = -6.468E-01 ]
+>> Step size and gradient norm: 
+		3.515E-04   and   1.146E+02 	[ landmark_points ]
+		1.758E-04   and   3.555E-01 	[ control_points ]
+		1.484E-03   and   5.950E+00 	[ momenta ]
+------------------------------------- Iteration: 17 -------------------------------------
+>> Log-likelihood = -6.391E+00 	 [ attachment = -5.738E+00 ; regularity = -6.523E-01 ]
+>> Step size and gradient norm: 
+		5.273E-04   and   8.169E+01 	[ landmark_points ]
+		2.637E-04   and   3.772E-01 	[ control_points ]
+		2.225E-03   and   4.761E+00 	[ momenta ]
+------------------------------------- Iteration: 18 -------------------------------------
+>> Log-likelihood = -6.335E+00 	 [ attachment = -5.673E+00 ; regularity = -6.624E-01 ]
+>> Step size and gradient norm: 
+		7.910E-04   and   9.447E+01 	[ landmark_points ]
+		3.955E-04   and   3.511E-01 	[ control_points ]
+		3.338E-03   and   5.030E+00 	[ momenta ]
+------------------------------------- Iteration: 19 -------------------------------------
+>> Log-likelihood = -6.285E+00 	 [ attachment = -5.611E+00 ; regularity = -6.742E-01 ]
+>> Step size and gradient norm: 
+		1.186E-03   and   1.891E+02 	[ landmark_points ]
+		5.932E-04   and   4.130E-01 	[ control_points ]
+		5.007E-03   and   8.702E+00 	[ momenta ]
+>> Step size and gradient norm: 
+		5.932E-04   and   1.891E+02 	[ landmark_points ]
+		2.966E-04   and   4.130E-01 	[ control_points ]
+		2.504E-03   and   8.702E+00 	[ momenta ]
+------------------------------------- Iteration: 20 -------------------------------------
+>> Log-likelihood = -6.223E+00 	 [ attachment = -5.543E+00 ; regularity = -6.798E-01 ]
+>> Step size and gradient norm: 
+		5.932E-04   and   1.070E+02 	[ landmark_points ]
+		1.483E-04   and   3.430E-01 	[ control_points ]
+		1.252E-03   and   5.323E+00 	[ momenta ]
+------------------------------------- Iteration: 21 -------------------------------------
+>> Log-likelihood = -6.181E+00 	 [ attachment = -5.498E+00 ; regularity = -6.833E-01 ]
+>> Step size and gradient norm: 
+		8.898E-04   and   6.993E+01 	[ landmark_points ]
+		2.225E-04   and   3.619E-01 	[ control_points ]
+		1.878E-03   and   4.022E+00 	[ momenta ]
+------------------------------------- Iteration: 22 -------------------------------------
+>> Log-likelihood = -6.133E+00 	 [ attachment = -5.443E+00 ; regularity = -6.896E-01 ]
+>> Step size and gradient norm: 
+		1.335E-03   and   7.755E+01 	[ landmark_points ]
+		3.337E-04   and   3.398E-01 	[ control_points ]
+		2.816E-03   and   4.179E+00 	[ momenta ]
+------------------------------------- Iteration: 23 -------------------------------------
+>> Log-likelihood = -6.079E+00 	 [ attachment = -5.382E+00 ; regularity = -6.970E-01 ]
+>> Step size and gradient norm: 
+		2.002E-03   and   1.448E+02 	[ landmark_points ]
+		5.005E-04   and   3.810E-01 	[ control_points ]
+		4.225E-03   and   6.752E+00 	[ momenta ]
+------------------------------------- Iteration: 24 -------------------------------------
+>> Log-likelihood = -6.057E+00 	 [ attachment = -5.353E+00 ; regularity = -7.040E-01 ]
+>> Step size and gradient norm: 
+		1.001E-03   and   2.163E+02 	[ landmark_points ]
+		5.005E-04   and   3.327E-01 	[ control_points ]
+		2.112E-03   and   9.638E+00 	[ momenta ]
+------------------------------------- Iteration: 25 -------------------------------------
+>> Log-likelihood = -5.991E+00 	 [ attachment = -5.286E+00 ; regularity = -7.053E-01 ]
+>> Step size and gradient norm: 
+		1.001E-03   and   1.282E+02 	[ landmark_points ]
+		2.503E-04   and   3.711E-01 	[ control_points ]
+		1.056E-03   and   6.040E+00 	[ momenta ]
+------------------------------------- Iteration: 26 -------------------------------------
+>> Log-likelihood = -5.948E+00 	 [ attachment = -5.240E+00 ; regularity = -7.081E-01 ]
+>> Step size and gradient norm: 
+		1.502E-03   and   8.157E+01 	[ landmark_points ]
+		3.754E-04   and   3.251E-01 	[ control_points ]
+		1.584E-03   and   4.207E+00 	[ momenta ]
+------------------------------------- Iteration: 27 -------------------------------------
+>> Log-likelihood = -5.904E+00 	 [ attachment = -5.193E+00 ; regularity = -7.108E-01 ]
+>> Step size and gradient norm: 
+		2.252E-03   and   1.021E+02 	[ landmark_points ]
+		5.631E-04   and   3.555E-01 	[ control_points ]
+		2.376E-03   and   4.986E+00 	[ momenta ]
+------------------------------------- Iteration: 28 -------------------------------------
+>> Log-likelihood = -5.885E+00 	 [ attachment = -5.169E+00 ; regularity = -7.164E-01 ]
+>> Step size and gradient norm: 
+		3.379E-03   and   2.407E+02 	[ landmark_points ]
+		8.447E-04   and   3.228E-01 	[ control_points ]
+		3.565E-03   and   1.065E+01 	[ momenta ]
+>> Step size and gradient norm: 
+		1.689E-03   and   2.407E+02 	[ landmark_points ]
+		4.223E-04   and   3.228E-01 	[ control_points ]
+		1.782E-03   and   1.065E+01 	[ momenta ]
+------------------------------------- Iteration: 29 -------------------------------------
+>> Log-likelihood = -5.810E+00 	 [ attachment = -5.094E+00 ; regularity = -7.167E-01 ]
+>> Step size and gradient norm: 
+		8.447E-04   and   8.630E+01 	[ landmark_points ]
+		4.223E-04   and   3.435E-01 	[ control_points ]
+		8.912E-04   and   4.348E+00 	[ momenta ]
+------------------------------------- Iteration: 30 -------------------------------------
+>> Log-likelihood = -5.782E+00 	 [ attachment = -5.064E+00 ; regularity = -7.183E-01 ]
+>> Step size and gradient norm: 
+		1.267E-03   and   4.562E+01 	[ landmark_points ]
+		6.335E-04   and   3.177E-01 	[ control_points ]
+		1.337E-03   and   2.933E+00 	[ momenta ]
+------------------------------------- Iteration: 31 -------------------------------------
+>> Log-likelihood = -5.749E+00 	 [ attachment = -5.029E+00 ; regularity = -7.201E-01 ]
+>> Step size and gradient norm: 
+		1.900E-03   and   4.441E+01 	[ landmark_points ]
+		9.502E-04   and   3.252E-01 	[ control_points ]
+		2.005E-03   and   2.886E+00 	[ momenta ]
+------------------------------------- Iteration: 32 -------------------------------------
+>> Log-likelihood = -5.704E+00 	 [ attachment = -4.981E+00 ; regularity = -7.232E-01 ]
+>> Step size and gradient norm: 
+		2.851E-03   and   6.134E+01 	[ landmark_points ]
+		1.425E-03   and   3.081E-01 	[ control_points ]
+		3.008E-03   and   3.381E+00 	[ momenta ]
+------------------------------------- Iteration: 33 -------------------------------------
+>> Log-likelihood = -5.667E+00 	 [ attachment = -4.941E+00 ; regularity = -7.263E-01 ]
+>> Step size and gradient norm: 
+		4.276E-03   and   1.764E+02 	[ landmark_points ]
+		2.138E-03   and   3.654E-01 	[ control_points ]
+		4.511E-03   and   7.928E+00 	[ momenta ]
+>> Step size and gradient norm: 
+		2.138E-03   and   1.764E+02 	[ landmark_points ]
+		1.069E-03   and   3.654E-01 	[ control_points ]
+		2.256E-03   and   7.928E+00 	[ momenta ]
+------------------------------------- Iteration: 34 -------------------------------------
+>> Log-likelihood = -5.628E+00 	 [ attachment = -4.900E+00 ; regularity = -7.283E-01 ]
+>> Step size and gradient norm: 
+		1.069E-03   and   1.227E+02 	[ landmark_points ]
+		1.069E-03   and   2.971E-01 	[ control_points ]
+		1.128E-03   and   5.679E+00 	[ momenta ]
+------------------------------------- Iteration: 35 -------------------------------------
+>> Log-likelihood = -5.598E+00 	 [ attachment = -4.870E+00 ; regularity = -7.288E-01 ]
+>> Step size and gradient norm: 
+		1.604E-03   and   8.640E+01 	[ landmark_points ]
+		1.604E-03   and   3.283E-01 	[ control_points ]
+		1.692E-03   and   4.255E+00 	[ momenta ]
+------------------------------------- Iteration: 36 -------------------------------------
+>> Log-likelihood = -5.575E+00 	 [ attachment = -4.844E+00 ; regularity = -7.310E-01 ]
+>> Step size and gradient norm: 
+		2.405E-03   and   1.262E+02 	[ landmark_points ]
+		2.405E-03   and   2.931E-01 	[ control_points ]
+		2.538E-03   and   5.806E+00 	[ momenta ]
+------------------------------------- Iteration: 37 -------------------------------------
+>> Log-likelihood = -5.549E+00 	 [ attachment = -4.818E+00 ; regularity = -7.314E-01 ]
+>> Step size and gradient norm: 
+		1.203E-03   and   1.129E+02 	[ landmark_points ]
+		2.405E-03   and   3.334E-01 	[ control_points ]
+		1.269E-03   and   5.275E+00 	[ momenta ]
+------------------------------------- Iteration: 38 -------------------------------------
+>> Log-likelihood = -5.524E+00 	 [ attachment = -4.791E+00 ; regularity = -7.330E-01 ]
+>> Step size and gradient norm: 
+		1.804E-03   and   1.017E+02 	[ landmark_points ]
+		3.608E-03   and   2.899E-01 	[ control_points ]
+		1.903E-03   and   4.804E+00 	[ momenta ]
+------------------------------------- Iteration: 39 -------------------------------------
+>> Log-likelihood = -5.515E+00 	 [ attachment = -4.781E+00 ; regularity = -7.337E-01 ]
+>> Step size and gradient norm: 
+		2.706E-03   and   1.800E+02 	[ landmark_points ]
+		5.412E-03   and   3.558E-01 	[ control_points ]
+		2.855E-03   and   8.040E+00 	[ momenta ]
+------------------------------------- Iteration: 40 -------------------------------------
+>> Log-likelihood = -5.500E+00 	 [ attachment = -4.764E+00 ; regularity = -7.358E-01 ]
+>> Step size and gradient norm: 
+		1.353E-03   and   2.028E+02 	[ landmark_points ]
+		5.412E-03   and   2.911E-01 	[ control_points ]
+		1.427E-03   and   8.980E+00 	[ momenta ]
+------------------------------------- Iteration: 41 -------------------------------------
+>> Log-likelihood = -5.488E+00 	 [ attachment = -4.753E+00 ; regularity = -7.355E-01 ]
+>> Step size and gradient norm: 
+		2.029E-03   and   2.277E+02 	[ landmark_points ]
+		8.118E-03   and   3.735E-01 	[ control_points ]
+		2.141E-03   and   1.005E+01 	[ momenta ]
+------------------------------------- Iteration: 42 -------------------------------------
+>> Log-likelihood = -5.438E+00 	 [ attachment = -4.701E+00 ; regularity = -7.371E-01 ]
+>> Step size and gradient norm: 
+		1.015E-03   and   1.383E+02 	[ landmark_points ]
+		8.118E-03   and   2.815E-01 	[ control_points ]
+		1.071E-03   and   6.261E+00 	[ momenta ]
+------------------------------------- Iteration: 43 -------------------------------------
+>> Log-likelihood = -5.409E+00 	 [ attachment = -4.672E+00 ; regularity = -7.370E-01 ]
+>> Step size and gradient norm: 
+		1.522E-03   and   8.521E+01 	[ landmark_points ]
+		1.218E-02   and   3.124E-01 	[ control_points ]
+		1.606E-03   and   4.128E+00 	[ momenta ]
+------------------------------------- Iteration: 44 -------------------------------------
+>> Log-likelihood = -5.392E+00 	 [ attachment = -4.653E+00 ; regularity = -7.385E-01 ]
+>> Step size and gradient norm: 
+		2.283E-03   and   1.162E+02 	[ landmark_points ]
+		1.827E-02   and   2.775E-01 	[ control_points ]
+		2.409E-03   and   5.340E+00 	[ momenta ]
+------------------------------------- Iteration: 45 -------------------------------------
+>> Log-likelihood = -5.369E+00 	 [ attachment = -4.630E+00 ; regularity = -7.384E-01 ]
+>> Step size and gradient norm: 
+		1.142E-03   and   9.355E+01 	[ landmark_points ]
+		1.827E-02   and   3.105E-01 	[ control_points ]
+		1.204E-03   and   4.439E+00 	[ momenta ]
+------------------------------------- Iteration: 46 -------------------------------------
+>> Log-likelihood = -5.348E+00 	 [ attachment = -4.608E+00 ; regularity = -7.395E-01 ]
+>> Step size and gradient norm: 
+		1.712E-03   and   7.726E+01 	[ landmark_points ]
+		2.740E-02   and   2.743E-01 	[ control_points ]
+		1.807E-03   and   3.777E+00 	[ momenta ]
+------------------------------------- Iteration: 47 -------------------------------------
+>> Log-likelihood = -5.332E+00 	 [ attachment = -4.592E+00 ; regularity = -7.398E-01 ]
+>> Step size and gradient norm: 
+		2.569E-03   and   1.244E+02 	[ landmark_points ]
+		4.110E-02   and   3.169E-01 	[ control_points ]
+		2.710E-03   and   5.676E+00 	[ momenta ]
+------------------------------------- Iteration: 48 -------------------------------------
+>> Log-likelihood = -5.312E+00 	 [ attachment = -4.571E+00 ; regularity = -7.411E-01 ]
+>> Step size and gradient norm: 
+		1.284E-03   and   1.293E+02 	[ landmark_points ]
+		4.110E-02   and   2.662E-01 	[ control_points ]
+		1.355E-03   and   5.848E+00 	[ momenta ]
+------------------------------------- Iteration: 49 -------------------------------------
+>> Log-likelihood = -5.293E+00 	 [ attachment = -4.552E+00 ; regularity = -7.410E-01 ]
+>> Step size and gradient norm: 
+		1.926E-03   and   1.312E+02 	[ landmark_points ]
+		6.164E-02   and   3.130E-01 	[ control_points ]
+		2.032E-03   and   5.953E+00 	[ momenta ]
+------------------------------------- Iteration: 50 -------------------------------------
+>> Log-likelihood = -5.264E+00 	 [ attachment = -4.522E+00 ; regularity = -7.419E-01 ]
+>> Step size and gradient norm: 
+		9.632E-04   and   7.524E+01 	[ landmark_points ]
+		6.164E-02   and   2.584E-01 	[ control_points ]
+		1.016E-03   and   3.657E+00 	[ momenta ]
+------------------------------------- Iteration: 51 -------------------------------------
+>> Log-likelihood = -5.244E+00 	 [ attachment = -4.502E+00 ; regularity = -7.422E-01 ]
+>> Step size and gradient norm: 
+		1.445E-03   and   4.409E+01 	[ landmark_points ]
+		9.247E-02   and   2.728E-01 	[ control_points ]
+		1.524E-03   and   2.563E+00 	[ momenta ]
+------------------------------------- Iteration: 52 -------------------------------------
+>> Log-likelihood = -5.220E+00 	 [ attachment = -4.477E+00 ; regularity = -7.432E-01 ]
+>> Step size and gradient norm: 
+		2.167E-03   and   5.531E+01 	[ landmark_points ]
+		1.387E-01   and   2.522E-01 	[ control_points ]
+		2.287E-03   and   2.913E+00 	[ momenta ]
+------------------------------------- Iteration: 53 -------------------------------------
+>> Log-likelihood = -5.196E+00 	 [ attachment = -4.452E+00 ; regularity = -7.440E-01 ]
+>> Step size and gradient norm: 
+		3.251E-03   and   1.167E+02 	[ landmark_points ]
+		2.081E-01   and   2.883E-01 	[ control_points ]
+		3.430E-03   and   5.340E+00 	[ momenta ]
+------------------------------------- Iteration: 54 -------------------------------------
+>> Log-likelihood = -5.187E+00 	 [ attachment = -4.441E+00 ; regularity = -7.457E-01 ]
+>> Step size and gradient norm: 
+		1.625E-03   and   1.911E+02 	[ landmark_points ]
+		2.081E-01   and   2.447E-01 	[ control_points ]
+		1.715E-03   and   8.422E+00 	[ momenta ]
+------------------------------------- Iteration: 55 -------------------------------------
+>> Log-likelihood = -5.134E+00 	 [ attachment = -4.388E+00 ; regularity = -7.458E-01 ]
+>> Step size and gradient norm: 
+		8.127E-04   and   6.373E+01 	[ landmark_points ]
+		2.081E-01   and   2.481E-01 	[ control_points ]
+		8.574E-04   and   3.260E+00 	[ momenta ]
+------------------------------------- Iteration: 56 -------------------------------------
+>> Log-likelihood = -5.111E+00 	 [ attachment = -4.364E+00 ; regularity = -7.468E-01 ]
+>> Step size and gradient norm: 
+		1.219E-03   and   3.825E+01 	[ landmark_points ]
+		3.121E-01   and   2.158E-01 	[ control_points ]
+		1.286E-03   and   2.391E+00 	[ momenta ]
+------------------------------------- Iteration: 57 -------------------------------------
+>> Log-likelihood = -5.081E+00 	 [ attachment = -4.333E+00 ; regularity = -7.481E-01 ]
+>> Step size and gradient norm: 
+		1.829E-03   and   3.286E+01 	[ landmark_points ]
+		4.681E-01   and   2.160E-01 	[ control_points ]
+		1.929E-03   and   2.284E+00 	[ momenta ]
+------------------------------------- Iteration: 58 -------------------------------------
+>> Log-likelihood = -5.041E+00 	 [ attachment = -4.291E+00 ; regularity = -7.504E-01 ]
+>> Step size and gradient norm: 
+		2.743E-03   and   5.369E+01 	[ landmark_points ]
+		7.022E-01   and   1.933E-01 	[ control_points ]
+		2.894E-03   and   2.938E+00 	[ momenta ]
+------------------------------------- Iteration: 59 -------------------------------------
+>> Log-likelihood = -5.004E+00 	 [ attachment = -4.251E+00 ; regularity = -7.533E-01 ]
+>> Step size and gradient norm: 
+		4.114E-03   and   1.465E+02 	[ landmark_points ]
+		1.053E+00   and   2.492E-01 	[ control_points ]
+		4.341E-03   and   6.635E+00 	[ momenta ]
+>> Step size and gradient norm: 
+		2.057E-03   and   1.465E+02 	[ landmark_points ]
+		5.266E-01   and   2.492E-01 	[ control_points ]
+		2.170E-03   and   6.635E+00 	[ momenta ]
+------------------------------------- Iteration: 60 -------------------------------------
+>> Log-likelihood = -4.967E+00 	 [ attachment = -4.212E+00 ; regularity = -7.546E-01 ]
+>> Step size and gradient norm: 
+		1.029E-03   and   1.254E+02 	[ landmark_points ]
+		5.266E-01   and   1.833E-01 	[ control_points ]
+		1.085E-03   and   5.909E+00 	[ momenta ]
+------------------------------------- Iteration: 61 -------------------------------------
+>> Log-likelihood = -4.935E+00 	 [ attachment = -4.178E+00 ; regularity = -7.567E-01 ]
+>> Step size and gradient norm: 
+		1.543E-03   and   9.095E+01 	[ landmark_points ]
+		7.899E-01   and   2.065E-01 	[ control_points ]
+		1.628E-03   and   4.446E+00 	[ momenta ]
+------------------------------------- Iteration: 62 -------------------------------------
+>> Log-likelihood = -4.915E+00 	 [ attachment = -4.156E+00 ; regularity = -7.588E-01 ]
+>> Step size and gradient norm: 
+		2.314E-03   and   1.639E+02 	[ landmark_points ]
+		1.185E+00   and   1.961E-01 	[ control_points ]
+		2.442E-03   and   7.588E+00 	[ momenta ]
+------------------------------------- Iteration: 63 -------------------------------------
+>> Log-likelihood = -4.896E+00 	 [ attachment = -4.133E+00 ; regularity = -7.629E-01 ]
+>> Step size and gradient norm: 
+		1.157E-03   and   1.844E+02 	[ landmark_points ]
+		1.185E+00   and   3.014E-01 	[ control_points ]
+		1.221E-03   and   8.693E+00 	[ momenta ]
+------------------------------------- Iteration: 64 -------------------------------------
+>> Log-likelihood = -4.841E+00 	 [ attachment = -4.078E+00 ; regularity = -7.627E-01 ]
+>> Step size and gradient norm: 
+		1.157E-03   and   1.072E+02 	[ landmark_points ]
+		5.925E-01   and   1.476E-01 	[ control_points ]
+		6.104E-04   and   5.186E+00 	[ momenta ]
+------------------------------------- Iteration: 65 -------------------------------------
+>> Log-likelihood = -4.814E+00 	 [ attachment = -4.049E+00 ; regularity = -7.651E-01 ]
+>> Step size and gradient norm: 
+		1.736E-03   and   4.590E+01 	[ landmark_points ]
+		8.887E-01   and   1.448E-01 	[ control_points ]
+		9.156E-04   and   2.946E+00 	[ momenta ]
+------------------------------------- Iteration: 66 -------------------------------------
+>> Log-likelihood = -4.788E+00 	 [ attachment = -4.021E+00 ; regularity = -7.663E-01 ]
+>> Step size and gradient norm: 
+		2.604E-03   and   6.588E+01 	[ landmark_points ]
+		1.333E+00   and   1.196E-01 	[ control_points ]
+		1.373E-03   and   3.769E+00 	[ momenta ]
+------------------------------------- Iteration: 67 -------------------------------------
+>> Log-likelihood = -4.766E+00 	 [ attachment = -3.995E+00 ; regularity = -7.706E-01 ]
+>> Step size and gradient norm: 
+		3.905E-03   and   1.262E+02 	[ landmark_points ]
+		2.000E+00   and   2.063E-01 	[ control_points ]
+		2.060E-03   and   5.910E+00 	[ momenta ]
+>> Step size and gradient norm: 
+		1.953E-03   and   1.262E+02 	[ landmark_points ]
+		9.998E-01   and   2.063E-01 	[ control_points ]
+		1.030E-03   and   5.910E+00 	[ momenta ]
+Tolerance threshold met. Stopping the optimization process.
+>> Estimation took: 04 minutes and 28 seconds
+Deformetrica.__del__()
+/home/bhlab/anaconda3/envs/landmark-free/lib/python3.7/site-packages/deformetrica/core/observations/deformable_objects/landmarks/surface_mesh.py:37: UserWarning: This overload of nonzero is deprecated:
+	nonzero(Tensor input, *, Tensor out)
+Consider using one of the following signatures instead:
+	nonzero(Tensor input, *, bool as_tuple) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:766.)
+  triangles_to_keep = torch.nonzero(torch.norm(normals, 2, 1) != 0)
