@@ -120,10 +120,4 @@ For further tutorial on running the pipeline please refer to appendix A in the p
 ## About
 
 If you used the code for your research, please, cite the paper:
-
-    @article{redheadtoussaint2018,
-      title={},
-      author={Redhead, Yushi and Toussaint, Nicolas},
-      journal={},
-      year={2018}
-    }
+Nicolas Toussaint, Yushi Redhead, Marta Vidal-Garcia, Lucas Lo Vercio, Wei Liu, Elizabeth Fisher, Benedikt Hallgrimsson, Victor Tybulewicz, Julia Schnabel, and Jeremy Green (2021) A landmark-free morphometrics pipeline for high-resolution phenotyping: application to a mouse model of Down Syndrome. *Development*
