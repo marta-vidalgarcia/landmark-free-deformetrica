@@ -1,10 +1,12 @@
 # Installation
 
-Operating System Requirements: Anaconda 3, Linux or Mac OS X distributions
+Operating System Requirements: Linux or Mac OS X distributions
 
 Absolutely required:
 
 - Please install by following the relevant links
+
+- Anaconda or Miniconda - https://anaconda.org/ or https://docs.conda.io/en/latest/miniconda.html
 
 - FSL - https://fsl.fmrib.ox.ac.uk/fsl/fslwiki  (Image analysis tools) 
 
@@ -44,6 +46,7 @@ Mitk - http://mitk.org/wiki/The_Medical_Imaging_Interaction_Toolkit_(MITK)
 This Pipeline has been tested on:
 
 - macOS High sierra V10.13.6
+- Ubuntu 18.04
 - Deformetrica 3 and 4
 - FSL 5.0.11
 - ITK 4.12.2
